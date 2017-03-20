@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Invoice Export
+ *
+ * @category IPaulK
+ * @package IPaulK_InvoiceExport
+ * @link https://github.com/iPaulK/mage-advanced-invoice-export/
+ * @license https://opensource.org/licenses/MIT
+ */
+-->
+<config>
+    <modules>
+        <IPaulK_InvoiceExport>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+            	<Mage_Adminhtml/>
+                <Mage_Sales/>
+            </depends>
+        </IPaulK_InvoiceExport>
+    </modules>
+</config> 

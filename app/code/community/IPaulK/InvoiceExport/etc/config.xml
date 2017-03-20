@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Invoice Export
+ *
+ * @category IPaulK
+ * @package IPaulK_InvoiceExport
+ * @link https://github.com/iPaulK/mage-advanced-invoice-export/
+ * @license https://opensource.org/licenses/MIT
+ */
+-->
+<config>
+    <modules>
+        <IPaulK_InvoiceExport>
+            <version>0.1.0</version>
+        </IPaulK_InvoiceExport>
+    </modules>
+    <global>
+        <blocks>
+            <ipaulk_invoiceexport>
+                <class>IPaulK_InvoiceExport_Block</class>
+            </ipaulk_invoiceexport>
+            <adminhtml>
+                <rewrite>
+                    <sales_invoice_grid>IPaulK_InvoiceExport_Block_Adminhtml_Sales_Invoice_Grid</sales_invoice_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <ipaulk_invoiceexport>
+                <class>IPaulK_InvoiceExport_Helper</class>
+            </ipaulk_invoiceexport>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <ipaulk_invoiceexport>
+                <use>admin</use>
+                <args>
+                    <module>IPaulK_InvoiceExport</module>
+                    <frontName>invoiceexport</frontName>
+                </args>
+            </ipaulk_invoiceexport>
+        </routers>
+    </admin>
+</config>
