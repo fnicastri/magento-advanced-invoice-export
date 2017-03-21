@@ -283,6 +283,11 @@ class IPaulK_InvoiceExport_Block_Adminhtml_Sales_Invoice_Grid_Csv extends Mage_A
             'renderer'  =>  'IPaulK_InvoiceExport_Block_Adminhtml_Sales_Invoice_Grid_Renderer_Paymentinfo',
         ));
 
+        $this->addColumn('product_info', array(
+            'header'    => Mage::helper('sales')->__('Product Ids'),
+            'renderer'  =>  'IPaulK_InvoiceExport_Block_Adminhtml_Sales_Invoice_Grid_Renderer_ProductsInfo',
+        ));
+
         return parent::_prepareColumns();
     }
 }
